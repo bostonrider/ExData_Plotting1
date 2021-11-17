@@ -1,3 +1,5 @@
+library("lubridate")
+
 #download the data to the working directory first. 
 
 powercom<-read.table("household_power_consumption.txt", header=TRUE,sep=";",  na.strings = "?")
@@ -14,7 +16,7 @@ powercom<-read.table("household_power_consumption.txt", header=TRUE,sep=";",  na
   plotset$datetime<-paste(plotset$Date, plotset$Time)
 
 
-
+#set graphical parameters
   par(mfrow=c(2,2),mar=c(4,4,2,1))  
 
 # graph at top-left corner
