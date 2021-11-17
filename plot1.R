@@ -15,8 +15,7 @@
 
   plotset<-subset(powercom, as.Date("2007-02-01") <= Date & Date <=as.Date("2007-02-02"))
 
-
-
+#The first plot
 
   hist(plotset$Global_active_power, col="red", xlab="Global Acitve Power (kilowatts)",
      main="Global Active Power")
