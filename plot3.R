@@ -1,4 +1,4 @@
-
+library("lubridate")
 #download the data to the working directory first. 
 
 powercom<-read.table("household_power_consumption.txt", header=TRUE,sep=";",  na.strings = "?")
@@ -14,7 +14,7 @@ powercom<-read.table("household_power_consumption.txt", header=TRUE,sep=";",  na
 #combine date and time
   plotset$datetime<-paste(plotset$Date, plotset$Time)
 
-
+# make plot 3
 
   with(plotset, plot(as.POSIXct(datetime), Sub_metering_1, type="l", ylab="Energy sub metering",
                    xlab="",
